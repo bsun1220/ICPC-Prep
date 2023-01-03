@@ -60,6 +60,8 @@
         "variant": "cpp",
         "vector": "cpp",
         "algorithm": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "deque": "cpp",
+        "stack": "cpp"
     }
 }
