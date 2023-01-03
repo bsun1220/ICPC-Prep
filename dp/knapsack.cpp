@@ -17,7 +17,8 @@ int main(){
 
 int knapsack(vector<int> values, vector<int> weights, int max_weight){
     int n = max_weight;
-    int mat[n][n];
+    int m = values.size();
+    int mat[m + 1][n + 1];
 
     for(int i = 0; i < n; i++){
         mat[i][0] = 0;
@@ -27,10 +28,15 @@ int knapsack(vector<int> values, vector<int> weights, int max_weight){
         mat[0][j] = 0;
     }
 
-    for(int i = 1; i < n; i++){
-        for(int j = 1; j < n; j++){
-            continue;
+    for(int i = 1; i < m + 1; i++){
+        for(int j = 1; j < n + 1; j++){
+            if(weights[i] < j){
+                mat[i][j] = mat[i - 1][j];
+            } else {
+                mat[i][j] = max(mat[i - 1][j], mat[i - 1][j - weights[i]] + values[i]);
+            }
         }
     }
+    return mat[m][n];
 
 }
