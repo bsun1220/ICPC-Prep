@@ -13,9 +13,10 @@ vector<vector<int>> edge_list;
 void kruskal();
 
 int main(){
-
+    cout << __cplusplus << "\n";
 }
 
+/*
 void kruskal(){
     sort(edge_list.begin(), edge_list.end());
     set<int> nodes;
@@ -27,4 +28,4 @@ void kruskal(){
             continue;
         }
     }
-}
+}*/
