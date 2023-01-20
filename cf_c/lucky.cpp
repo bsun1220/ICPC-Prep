@@ -1,12 +1,4 @@
-#include <set>
-#include <iostream>
-#include <vector>
-#include <map>
-#include <deque>
-#include <stack>
-#include <queue>
-#include <math.h>
-#include <stdio.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
