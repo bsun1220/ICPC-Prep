@@ -43,6 +43,9 @@ int main(){
         else if (arr[end] == arr[end - 1]){
             end--; 
         }
+        else { 
+            
+        }
 
     }
 
