@@ -9,25 +9,17 @@
 #define ll                    long long int
 using namespace std;
 
-ll power(ll x, ll y)
-{
-    ll temp;
-    if (y == 0)
-        return 1;
-    temp = power(x, y / 2);
-    if (y % 2 == 0)
-        return temp * temp;
-    else
-        return x * temp * temp;
+ll recurse(ll n){
+    if (n == 1){
+        return 2; 
+    }
+    return 3 * recurse(n - 1) + 2; 
 }
 
 int main(){
     ll n; cin >> n;
     ll m; cin >> m;
-    ll ans = (power(3, n) - 1) % m;
-    if (ans < 0){
-        ans += m;
-    }
+    ll ans = recurse(n) % m;
     cout << ans % m << endl;
 
 }
