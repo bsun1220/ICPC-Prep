@@ -29,9 +29,10 @@ int main(){
         cout << "NO" << endl;
         return 0;
     }
-
+    int max_interval = 0;
+    int 
     for(int i = start; i < n; i++){
-        
+
     }
 
 
