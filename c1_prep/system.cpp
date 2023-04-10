@@ -9,16 +9,16 @@
 using namespace std;
 
 int main(){
-    int n, m, v; 
+    ll n, m, v; 
     cin >> n >> m >> v;
-    if (((n - 1) * (n - 2) + 1)/2 < m){
+    if (((n - 1) * (n - 2))/2  + 1< m){
         cout << -1 << endl;
         return 0;
     } else if (m < n - 1){
         cout << -1 << endl;
         return 0;
     }
-    int arr[n];
+    ll arr[n];
     for(int i = 0; i < n; i++){
         arr[i] = i + 1; 
     }
